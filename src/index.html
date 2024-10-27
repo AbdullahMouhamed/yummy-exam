@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../dist/img/logo.png">
+    <title>Yummy</title>
+    <!-- ? tailwind -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <!-- ^ fontawesome -->
+    <link rel="stylesheet" href="../dist/css/all.min.css">
+    <!-- ! media style -->
+    <link rel="stylesheet" href="../dist/css/media.css">
+</head>
+
+<body class="bg-[#0D0D0D]">
+
+
+    <!-- !nav -->
+    <nav class=" z-50 fixed top-0 bottom-0 flex left-[-25vh]">
+        <div
+            class="side-nav  bg-[#0D0D0D]  w-[25vh] p-[40px]  flex flex-col justify-between overflow-hidden side-nav  ">
+            <div class="nav-content  text-white overflow-hidden w-[100%] relative flex flex-col gap-4 text-[23px] ">
+                <a class="py-2 relative floating-links top-[100%] nav-search" href="#">Search</a>
+                <a class="py-2 relative floating-links top-[100%] categories" href="#">Categories</a>
+                <a class="py-2 relative floating-links top-[100%] area" href="#">Area</a>
+                <a class="py-2 relative floating-links top-[100%] ingredients" href="#">Ingredients</a>
+                <a class="py-2 relative floating-links top-[100%] contact" href="#">Contact Us</a>
+            </div>
+            <div class="nav-footer  text-white text-[22px] pb-4">
+                <div>
+                    <i class="fa-brands cursor-pointer fa-facebook"></i>
+                    <i class="fa-brands cursor-pointer fa-twitter"></i>
+                    <i class="fa-solid cursor-pointer fa-globe"></i>
+                </div>
+
+                <p>
+                    Copyright Â© 2019 All Rights
+                    Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="nav-opener  bg-white w-[100px] flex flex-col justify-between py-[50px] items-center">
+            <div class="logo  w-[70px]"> <img class="w-[100%]" src="../dist/img/logo.png" alt="yummy logo"></div>
+            <div class="text-[50px] "><i class="fa-solid cursor-pointer fa-bars"></i> <i
+                    class="fa-solid cursor-pointer fa-x none"></i></div>
+            <div class="flex flex-col text-[25px]">
+                <i class="fa-solid cursor-pointer pb-2 fa-globe"></i>
+                <i class="fa-solid cursor-pointer fa-share-nodes"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!--~ landing -->
+    <div class="landing-main  ">
+        <div class="my-container landing grid grid-cols-4 gap-6 pt-16">
+
+        </div>
+    </div>
+
+    <!--& search -->s
+    <div class="search none ">
+        <div class="my-container">
+            <div class=" search-bars pt-16 flex justify-between">
+                <input type="search" name=" search" id="" onkeyup=" getName()"
+                    class="w-[45%] nameSearch h-14 bg-transparent border-white border-2 rounded-[10px] text-[25px] ps-4  "
+                    placeholder="Search By Name">
+                <input maxlength="1" type="search" name="" id="" onkeyup=" getLetter()"
+                    class="w-[45%] h-14 letterSearch bg-transparent  border-white border-2 rounded-[10px] text-[25px] ps-4  "
+                    placeholder="Search By First Letter">
+            </div>
+            <div class=" name-search grid grid-cols-4 gap-6 pt-16">
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ? meal details -->
+
+    <div class="details none ">
+        <div class="my-container details-cont grid grid-cols-3 pt-16">
+
+        </div>
+    </div>
+    <!-- * catagory -->
+    <div class="catagory none ">
+        <div class="my-container cata-box grid grid-cols-4 gap-8 pt-16">
+
+
+        </div>
+    </div>
+    <!--! area -->
+    <div class="area-content none">
+        <div class="my-container show-area grid grid-cols-4 gap-8 pt-16 text-center">
+
+
+        </div>
+    </div>
+    <!-- Ingredients -->
+
+    <div class="ingredients-content none  ">
+        <div class="my-container text-white Ingredients-container grid grid-cols-4 gap-8 pt-16 text-center">
+
+        </div>
+    </div>
+
+    <!-- * contact-->
+
+    <div class="contact-content h-[100vh]  flex flex-col gap-14  justify-center items-center none  ">
+        <div class="my-container flex  justify-between items-center gap-10 h-[100px] flex-wrap ">
+            <div class="w-[100%] xl:w-[45%]   overflow-hidden"><input onkeyup="inputsValid()" placeholder="Enter Your Name"
+                    class="w-full text-black name-input h-[60px] rounded-[10px]  ps-8 text-[20px]" type="text">
+                <div
+                    class="name-error text-red-400 bg-red-200 mt-4 h-[100px] text-center none overflow-hidden flex justify-center items-center rounded-[5px] text-[25px]">
+                    <p>Special characters and numbers not allowed</p>
+                </div>
+            </div>
+            <div class="w-[100%] xl:w-[45%]   overflow-hidden"><input onkeyup="inputsValid()" placeholder="Enter Your Email"
+                    class="w-full text-black email-input h-[60px] rounded-[10px]  ps-8 text-[20px]" type="email">
+                <div
+                    class="email-error text-red-400 bg-red-200 mt-4 h-[100px] text-center none overflow-hidden flex justify-center items-center rounded-[5px] text-[25px]">
+                    <p>Email not valid *exemple@yyy.zzz</p>
+                </div>
+            </div>
+            <div class="w-[100%] xl:w-[45%]   overflow-hidden"><input onkeyup="inputsValid()" placeholder="Enter Your Phone"
+                    class="w-full text-black phone-input  h-[60px] rounded-[10px] ps-8 text-[20px]" type="text">
+                <div
+                    class="phone-error text-red-400 bg-red-200 mt-4 h-[100px] text-center none overflow-hidden flex justify-center items-center rounded-[5px] text-[25px]">
+                    <p>Enter valid Phone Number</p>
+                </div>
+            </div>
+            <div class="w-[100%] xl:w-[45%]    overflow-hidden"><input onkeyup="inputsValid()" placeholder="Enter Your Age"
+                    class="w-full text-black age-input h-[60px] rounded-[10px]  ps-8 text-[20px]" type="number">
+                <div
+                    class="age-error text-red-400 bg-red-200 mt-4 h-[100px] text-center none overflow-hidden flex justify-center items-center rounded-[5px] text-[25px]">
+                    <p>Enter valid age</p>
+                </div>
+            </div>
+            <div class="w-[100%] xl:w-[45%]   overflow-hidden"><input onkeyup="inputsValid()" placeholder="Enter Your Password"
+                    class="w-full text-black password-input h-[60px] rounded-[10px]  ps-8 text-[20px]" type="password">
+                <div
+                    class="password-error text-red-400 bg-red-200 mt-4 h-[100px] text-center none overflow-hidden flex justify-center items-center rounded-[5px] text-[25px]">
+                    <p>Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+                </div>
+            </div>
+            <div class="w-[100%] xl:w-[45%]   overflow-hidden"><input onkeyup="inputsValid()" placeholder=" Re Enter Password"
+                    class="w-full text-black repass-input h-[60px]  rounded-[10px] ps-8 text-[20px]" type="password">
+                <div
+                    class="repass-error text-red-400 bg-red-200 mt-4 h-[100px] text-center none overflow-hidden flex justify-center items-center rounded-[5px] text-[25px]">
+                    <p>Enter valid repassword</p>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto sub-btn off w-[150px] h-[60px] flex justify-center items-center text-[25px]">
+            <button>Submit</button>
+        </div>
+    </div>
+
+    <!-- ^ loader -->
+    <div class="loader hidden">
+        <div class=" fixed flex justify-center items-center z-50 top-0 left-0 right-0 bottom-0 bg-black">
+            <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--! jquery -->
+
+    <script src="../src/js/jquery-3.7.1.min.js"></script>
+    <!--~ main js -->
+    <script src="../src/js/index.js"></script>
+</body>
+
+</html>

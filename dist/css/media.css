@@ -1,0 +1,15 @@
+@media screen and (max-width:770px) {
+    .my-container {
+        width: 80%;
+        margin-left: 110px;
+    }
+
+    .search-bars {
+        flex-direction: column;
+
+        input {
+            width: 100%;
+
+        }
+    }
+}
